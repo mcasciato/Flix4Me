@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# Flix4Me
+Keep track of your favorite movies and TV shows in this Rails app with an AngularJS front-end!
+>>>>>>> e32a7a3e943e4601728a4bc5dc8da626277cb694
