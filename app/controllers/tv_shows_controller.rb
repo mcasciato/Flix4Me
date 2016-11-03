@@ -34,7 +34,16 @@ class TvShowsController < ApplicationController
     end
 
     def destroy
-
+        tv_show = TvShow.find_by_id(params[:id])
+        if tv_show.user == current_user.id
+            if tv_show.destroy
+                render json: { status: 201 }
+            else
+                render json:
+                    { errors: tv_show.errors.full_messages },
+                    status: 422
+            end
+        end
     end
 
     private
