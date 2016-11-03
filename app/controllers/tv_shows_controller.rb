@@ -23,7 +23,14 @@ class TvShowsController < ApplicationController
     end
 
     def update
-
+        tv_show = TvShow.find_by_id(params[:id])
+        if tv_show.update(tv_show_params)
+            render json: { status: 201 }
+        else
+            render json:
+                { errors: tv_show.error.full_messages },
+                status: 422
+        end
     end
 
     def destroy
