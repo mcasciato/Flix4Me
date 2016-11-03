@@ -33,6 +33,19 @@ class MoviesController < ApplicationController
         end
     end
 
+    def destroy
+        movie = Movie.find_by_id(params[:id])
+        if movie.user == current_user.id
+            if movie.destroy
+                render json: { status: 201 }
+            else
+                render json:
+                    { errors: movie.errors.full_messages },
+                    status: 422
+            end
+        end
+    end
+
     private
 
     def movie_params
