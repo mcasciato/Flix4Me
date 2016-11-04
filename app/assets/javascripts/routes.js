@@ -35,6 +35,11 @@
                     templateUrl: 'movies/movies.html',
                     controller: 'MoviesController as moviesCtrl'
                 })
+                .state('home.tv_shows', {
+                    url: 'tv_shows',
+                    templateUrl: 'tv_shows/tv_shows.html',
+                    controller: 'TvShowsController as tvShowsCtrl'
+                })
 
                 $urlRouterProvider.otherwise('/')
 
