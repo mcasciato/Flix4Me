@@ -21,6 +21,7 @@
         }
     };
 
+    AuthController.$inject = ['$state', 'Auth'];
 
     angular
         .module('flix4me')
