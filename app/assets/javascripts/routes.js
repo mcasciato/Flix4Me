@@ -3,7 +3,7 @@
 
     angular
         .module('flix4me')
-        .config(function($stateProvider, $urlRouterProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
             $stateProvider
                 .state('home', {
                     url: '/',
@@ -31,5 +31,5 @@
                     }]
                 })
 
-        })
+        }]);
 }())
