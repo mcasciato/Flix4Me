@@ -30,7 +30,12 @@
                         });
                     }]
                 })
-                
+                .state('home.movies', {
+                    url: 'movies',
+                    templateUrl: 'movies/movies.html',
+                    controller: 'MoviesController as moviesCtrl'
+                })
+
                 $urlRouterProvider.otherwise('/')
 
         }]);
