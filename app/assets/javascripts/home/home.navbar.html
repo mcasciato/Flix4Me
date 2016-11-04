@@ -3,17 +3,17 @@
   <div class="collapse navbar-toggleable-md" id="navbarResponsive">
     <a class="navbar-brand" href="/"><i class="fa fa-film"></i> Flix4Me</a>
     <ul class="nav navbar-nav float-xs-right">
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="" ui-sref="home"><i class="fa fa-film"></i> Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info"></i> About</a>
-      </li>
+      </li> -->
       <li class="nav-item" ng-show="homeCtrl.signedIn">
         <a class="nav-link" href="" ui-sref="home.movies"><i class="fa fa-ticket"></i> Movies</a>
       </li>
       <li class="nav-item" ng-show="homeCtrl.signedIn">
         <a class="nav-link" href="" ui-sref="home.tv_shows"><i class="fa fa-television"></i> TV Shows</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info"></i> About</a>
       </li>
       <!-- <li class="nav-item">
           <a class="nav-link" href="" ui-sref="home.register"><i class="fa fa-user-plus" title="Register"></i> Register</a>
