@@ -5,8 +5,6 @@
     function HomeController($scope, Auth, $state) {
         var vm = this;
 
-        vm.name = "Michael";
-
         vm.signedIn = Auth.isAuthenticated;
         vm.logout = Auth.logout;
         vm.getCurrentUser = getCurrentUser;
