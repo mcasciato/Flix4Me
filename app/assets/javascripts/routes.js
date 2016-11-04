@@ -13,7 +13,7 @@
                 .state('home.register', {
                     url: 'register',
                     templateUrl: 'auth/register.html',
-                    controller: 'AuthController as authCrl'
+                    controller: 'AuthController as authCtrl'
                     onEnter: ['$state', 'Auth', function($state, Auth) {
                         Auth.currentUser().then(function(){
                             $state.go('home.mylist');
