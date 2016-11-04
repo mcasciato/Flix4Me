@@ -14,6 +14,7 @@
 
         function register() {
             Auth.register(vm.user)
+                .then(goToList)
         };
 
         function goToList() {
