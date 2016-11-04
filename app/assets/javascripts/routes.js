@@ -10,9 +10,9 @@
                     templateUrl: 'home/home.html',
                     controller: 'HomeController as homeCtrl'
                 })
-                .state('home.signup', {
-                    url: 'signup',
-                    templateUrl: 'auth/signup.html',
+                .state('home.register', {
+                    url: 'register',
+                    templateUrl: 'auth/register.html',
                     controller: 'AuthController as authCrl'
                     onEnter: ['$state', 'Auth', function($state, Auth) {
                         Auth.currentUser().then(function(){
@@ -30,6 +30,6 @@
                         });
                     }]
                 })
-                
+
         })
 }())
