@@ -1,38 +1,9 @@
-<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
-  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
-  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-    <a class="navbar-brand" href="#"><i class="fa fa-film"></i> Flix4Me</a>
-    <ul class="nav navbar-nav float-xs-right">
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-film"></i> Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-ticket"></i> Movies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-television"></i> TV Shows</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-info"></i> About</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="" ui-sref="home.register">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<br><br><br><br>
+<div ng-include="'home/home.navbar.html'"></div>
+
 <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-3">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-2">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
-    </div>
+    <ui-view></ui-view>
 </div>
+
 
 <footer class="footer">
     <div class="container">

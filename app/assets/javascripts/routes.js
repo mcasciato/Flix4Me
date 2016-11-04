@@ -13,7 +13,7 @@
                 .state('home.register', {
                     url: 'register',
                     templateUrl: 'auth/register.html',
-                    controller: 'AuthController as authCtrl'
+                    controller: 'AuthController as authCtrl',
                     onEnter: ['$state', 'Auth', function($state, Auth) {
                         Auth.currentUser().then(function(){
                             $state.go('home.mylist');
@@ -30,6 +30,8 @@
                         });
                     }]
                 })
+                
+                $urlRouterProvider.otherwise('/')
 
         }]);
 }())
