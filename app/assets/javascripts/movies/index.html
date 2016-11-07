@@ -1,7 +1,23 @@
 <h1 class="display-3">Movies</h1>
 
-<div class="panel-body">
-    <div class="form-group">
-        <label for="search">Search: </label>
-        <input class="form-control" ng-model="moviesCtrl.searchTerm" ng-change="moviesCtrl.refilter()" placeholder="Search by name (e.g. Interstellar)">
-    </div>
+<div class="form-group">
+    <label for="search">Search: </label>
+    <input class="form-control" ng-model="moviesCtrl.searchTerm" ng-change="moviesCtrl.refilter()" placeholder="Search by name (e.g. Interstellar)">
+</div>
+
+<table class="table table-hover">
+    <thead class="thead-default">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="movie in moviesCtrl.filteredList track by movie.id">
+            <td><a href="">{{ movie.title }}</a></td>
+            <td><a href="">{{ movie.year }}</a></td>
+            <td><a href="">{{ movie.genre }}</a></td>
+        </tr>
+    </tbody>
+</table>
