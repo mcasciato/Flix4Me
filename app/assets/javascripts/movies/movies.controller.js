@@ -1,26 +1,33 @@
-function MoviesController(MovieFactory) {
-    var vm = this;
+(function() {
+    function MoviesController(MovieFactory, $filter, $state, Auth) {
+        var vm = this;
 
-    vm.getMovies = getMovies;
+        vm.getMovies = getMovies;
+        vm.refilter = refilter;
 
-    activate();
+        activate();
 
-    function activate() {
-        getMovies;
+        function activate() {
+            getMovies;
+        };
+
+        function getMovies() {
+            return MovieFactory.getMovies()
+                               .then(setMovies)
+        };
+
+        function setMovies(data) {
+            return vm.movies = data;
+        };
+
+        function refilter() {
+
+        }
     };
 
-    function getMovies() {
-        return MovieFactory.getMovies()
-                           .then(setMovies)
-    };
+    MoviesController.$inject = ['MovieFactory', '$filter', '$state', 'Auth']
 
-    function setMovies(data) {
-        return vm.movies = data;
-    };
-};
-
-MoviesController.$inject = ['MovieFactory']
-
-angular
-    .module('flix4me')
-    .controller('MoviesController', MoviesController);
+    angular
+        .module('flix4me')
+        .controller('MoviesController', MoviesController)
+}());
