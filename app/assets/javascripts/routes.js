@@ -32,12 +32,12 @@
                 })
                 .state('home.movies', {
                     url: 'movies',
-                    templateUrl: 'movies/movies.html',
+                    templateUrl: 'movies/index.html',
                     controller: 'MoviesController as moviesCtrl'
                 })
                 .state('home.tv_shows', {
                     url: 'tv_shows',
-                    templateUrl: 'tv_shows/tv_shows.html',
+                    templateUrl: 'tv_shows/index.html',
                     controller: 'TvShowsController as tvShowsCtrl'
                 })
                 .state('home.about', {
