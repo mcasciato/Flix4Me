@@ -29,7 +29,9 @@
         }
 
         function refilter() {
-
+            if (vm.searchTerm) {
+                return vm.filteredList = $filter('filter')(vm.movies, vm.searchTerm)
+            }
         }
     };
 
