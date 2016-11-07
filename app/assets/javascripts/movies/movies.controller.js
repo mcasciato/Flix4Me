@@ -1,4 +1,7 @@
 (function() {
+
+    'use strict';
+
     function MoviesController() {
 
     };
@@ -7,4 +10,4 @@
         .module('flix4me')
         .controller('MoviesController', MoviesController)
 
-}())
+}());

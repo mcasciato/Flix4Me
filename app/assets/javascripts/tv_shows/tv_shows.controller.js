@@ -1,4 +1,7 @@
 (function() {
+
+    'use strict';
+
     function TvShowsController() {
 
     };
@@ -7,4 +10,4 @@
         .module('flix4me')
         .controller('TvShowsController', TvShowsController)
 
-}())
+}());
