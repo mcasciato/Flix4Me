@@ -1,13 +1,26 @@
-(function() {
+function MoviesController(MovieFactory) {
+    var vm = this;
 
-    'use strict';
+    vm.getMovies = getMovies;
 
-    function MoviesController() {
+    activate();
 
+    function activate() {
+        getMovies;
     };
 
-    angular
-        .module('flix4me')
-        .controller('MoviesController', MoviesController)
+    function getMovies() {
+        return MovieFactory.getMovies()
+                           .then(setMovies)
+    };
 
-}());
+    function setMovies(data) {
+        return vm.movies = data;
+    };
+};
+
+MoviesController.$inject = ['MovieFactory']
+
+angular
+    .module('flix4me')
+    .controller('MoviesController', MoviesController);
