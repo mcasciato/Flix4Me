@@ -22,7 +22,7 @@
                                .then(setMovies)
         }
 
-        function setMovies() {
+        function setMovies(data) {
             ctrl.movies = data
         }
     }
