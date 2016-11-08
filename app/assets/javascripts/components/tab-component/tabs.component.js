@@ -4,7 +4,7 @@
 
     var tabs = {
         transclude: true,
-        controller: TabsController;
+        controller: TabsController,
         templateUrl: 'components/tab-component/tabs.html'
     }
 
