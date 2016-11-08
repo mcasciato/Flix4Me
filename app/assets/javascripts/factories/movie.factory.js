@@ -11,6 +11,15 @@
                         .then(handleSuccess)
                         .catch(handleError)
         }
+
+        function handleSuccess(response) {
+            console.log(response)
+            return response.data
+        }
+
+        function handleError(error) {
+            console.log(error)
+        }
     }
 
     angular
