@@ -1,13 +1,11 @@
 <br>
-<form class="form-inline">
-    <div class="form-group">
-        <label for="search">Search by Title or Genre: </label>
-        <input class="form-control" ng-model="$ctrl.searchTerm" ng-change="$ctrl.refilter()" placeholder="(e.g., Interstellar or Science Fiction)">
-        <button type="button" name="button" class="btn btn-primary">Add a Movie</button>
+<form>
+    <div class="form-group-row">
+        <input class="form-control" ng-model="$ctrl.searchTerm" ng-change="$ctrl.refilter()" placeholder="Search by Title or Genre (e.g., Interstellar or Science Fiction)">
     </div>
 </form>
 
-<br><br>
+<br>
 
 <table class="table table-hover">
     <thead class="thead-default">
