@@ -1,7 +1,18 @@
 <button type="button" name="button" class="btn btn-primary">Add a Movie</button>
 
-<div ng-repeat="movie in $ctrl.movies">
-    <p class="lead">
-        {{ movie.title }}
-    </p>
-</div>
+<table class="table table-hover">
+    <thead class="thead-default">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="movie in $ctrl.movies">
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.year }}</td>
+            <td>{{ movie.genre }}</td>
+        </tr>
+    </tbody>
+</table>
