@@ -29,7 +29,7 @@
             ctrl.tvshows = data
         }
 
-        function setFilteredList() {
+        function setFilteredList(data) {
             return ctrl.filteredList = data;
         }
 

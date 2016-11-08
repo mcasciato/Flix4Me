@@ -29,7 +29,7 @@
             ctrl.movies = data
         }
 
-        function setFilteredList() {
+        function setFilteredList(data) {
             return ctrl.filteredList = data;
         }
 
