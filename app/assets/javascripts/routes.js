@@ -16,6 +16,10 @@
                     templateUrl: 'user/profile.html',
                     controller: 'ProfileController as vm'
                 })
+                .state('home.about', {
+                    url: 'about',
+                    templateUrl: 'about/about.html'
+                })
 
             $urlRouterProvider.otherwise('/')
         })
