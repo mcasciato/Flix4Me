@@ -8,8 +8,10 @@
         templateUrl: 'components/movies/movies.html'
     }
 
-    function MovieComponentController(MovieFactory) {
+    function MovieComponentController(MovieFactory, $filter, $state) {
         var ctrl = this
+
+        ctrl.refilter = refilter
 
         activate()
 
@@ -20,10 +22,19 @@
         function getMovies() {
             return MovieFactory.getMovies()
                                .then(setMovies)
+                               .then(setFilteredList)
         }
 
         function setMovies(data) {
             ctrl.movies = data
+        }
+
+        function setFilteredList() {
+
+        }
+
+        function refilter() {
+
         }
     }
 
