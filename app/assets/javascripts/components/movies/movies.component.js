@@ -30,7 +30,7 @@
         }
 
         function setFilteredList() {
-
+            return ctrl.filteredList = data;
         }
 
         function refilter() {
