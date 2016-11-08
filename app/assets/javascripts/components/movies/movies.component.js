@@ -9,7 +9,22 @@
     }
 
     function MovieComponentController(MovieFactory) {
+        var ctrl = this
 
+        activate()
+
+        function activate() {
+            getMovies()
+        }
+
+        function getMovies() {
+            return MovieFactory.getMovies()
+                               .then(setMovies)
+        }
+
+        function setMovies() {
+            ctrl.movies = data
+        }
     }
 
     angular
