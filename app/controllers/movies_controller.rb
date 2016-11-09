@@ -7,8 +7,16 @@ class MoviesController < ApplicationController
     end
 
     def show
-        movie = Movie.find_by_id(params[:id])
-        render json: movie
+        if current_user
+            movie = current_user.movies.find_by_id(params[:id])
+            render json: movie
+        else
+            render json:
+                { errors: movies.errors.full_messages },
+                status: 422
+        end
+        # movie = Movie.find_by_id(params[:id])
+        # render json: movie
     end
 
     def create
