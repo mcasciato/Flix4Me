@@ -3,11 +3,29 @@
 
     function MovieFactory($http) {
         return {
-            getMovies: getMovies
+            getMovies: getMovies,
+            createMovie: createMovie
         }
 
         function getMovies() {
             return $http.get('/movies')
+                        .then(handleSuccess)
+                        .catch(handleError)
+        }
+
+        function createMovie(movie) {
+            var req = {
+                method: 'POST',
+                url: '/movies',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                    movie: movie
+                }
+            };
+
+            return $http(req)
                         .then(handleSuccess)
                         .catch(handleError)
         }
