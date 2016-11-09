@@ -2,7 +2,7 @@ class TvShowsController < ApplicationController
     before_action :authenticate_user!, only: [:create, :update, :destroy]
 
     def index
-        tv_shows = TvShow.all
+        tv_shows = current_user.tv_shows
         render json: tv_shows
     end
 
@@ -12,7 +12,7 @@ class TvShowsController < ApplicationController
     end
 
     def create
-        tv_show = current_user.tv_shows.create(tv_show_params)
+        tv_show = current_user.tv_shows.new(tv_show_params)
         if tv_show.save
             render json: { status: 201 }
         else
