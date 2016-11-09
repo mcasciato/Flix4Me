@@ -2,11 +2,17 @@
 
     'use strict';
 
-    function HomeController($scope) {
-        $scope.name = 'Michael is Home'
+    function HomeController($scope, Auth, $state) {
+        var vm = this
+
+        vm.signedIn = Auth.isAuthenticated;
+        vm.logout = Auth.logout;
+        vm.getCurrentUser = getCurrentUser;
+
+                
     }
 
-    HomeController.$inject = ['$scope']
+    HomeController.$inject = ['$scope', 'Auth', '$state']
 
     angular
         .module('flix4me')
