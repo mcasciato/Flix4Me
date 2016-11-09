@@ -1,29 +1,29 @@
 <br>
-<form>
+<form ng-submit="$ctrl.createMovie()">
     <div class="form-group row">
         <div class="col-xs-6">
-            <input type="text" class="form-control" id="title" placeholder="Title">
+            <input ng-model="$ctrl.movie.title" type="text" class="form-control" id="title" placeholder="Title">
         </div>
     </div>
     <div class="form-group row">
         <div class="col-xs-6">
-            <input type="text" class="form-control" id="year" placeholder="Year (YYYY)">
+            <input ng-model="$ctrl.movie.year" type="number" class="form-control" id="year" placeholder="Year (YYYY)">
         </div>
     </div>
     <div class="form-group row">
         <div class="col-xs-6">
             <label for="plot" class="col-xs-2 col-form-label">Plot: </label>
-            <textarea name="plot" id="plot" rows="8" cols="40"></textarea>
+            <textarea ng-model="$ctrl.movie.plot" name="plot" id="plot" rows="8" cols="40"></textarea>
         </div>
     </div>
     <div class="form-group row">
         <div class="col-xs-6">
-            <input type="text" class="form-control" id="genre" placeholder="Genre">
+            <input ng-model="$ctrl.movie.genre" type="text" class="form-control" id="genre" placeholder="Genre">
         </div>
     </div>
     <div class="form-group row">
         <div class="col-xs-6">
-            <input type="number" class="form-control" id="number" placeholder="My Rating (1-lowest, 10-highest)">
+            <input ng-model="$ctrl.movie.rating" type="number" class="form-control" id="number" placeholder="My Rating (1-lowest, 10-highest)">
         </div>
     </div>
     <div class="form-group row">
