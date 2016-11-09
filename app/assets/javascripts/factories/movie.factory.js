@@ -4,7 +4,8 @@
     function MovieFactory($http) {
         return {
             getMovies: getMovies,
-            createMovie: createMovie
+            createMovie: createMovie,
+            getMovie: getMovie
         }
 
         function getMovies() {
@@ -26,6 +27,12 @@
             };
 
             return $http(req)
+                        .then(handleSuccess)
+                        .catch(handleError)
+        }
+
+        function getMovie(id) {
+            return $http.get('/movies' + id)
                         .then(handleSuccess)
                         .catch(handleError)
         }
