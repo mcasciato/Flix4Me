@@ -10,10 +10,10 @@
         <a class="nav-link" href="" ui-sref="home.profile" ng-show="homeCtrl.signedIn()"><i class="fa fa-user"></i> Profile</a>
       </li>
       <li class="nav-item" ng-hide="homeCtrl.signedIn()">
-          <a class="nav-link" href="" ui-sref="home.login">Log In</a>
+          <a class="nav-link" href="" ui-sref="home.login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
       </li>
       <li class="nav-item" ng-hide="homeCtrl.signedIn()">
-          <a class="nav-link" href="" ui-sref="home.register">Register</a>
+          <a class="nav-link" href="" ui-sref="home.register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
       </li>
       <li class="nav-item" ng-show="homeCtrl.signedIn()">
           <span class="nav-link"><i class="fa fa-check-square-o" aria-hidden="true"></i> Signed in as: {{ homeCtrl.user.username }}</span>
