@@ -20,7 +20,26 @@
                     url: 'about',
                     templateUrl: 'about/about.html'
                 })
-
+                .state('home.login', {
+                    url:'login',
+                    templateUrl: 'auth/login.html',
+                    controller: 'AuthController as authCtrl',
+                    onEnter: ['$state', 'Auth', function($state, Auth) {
+                        Auth.currentUser().then(function(){
+                            $state.go('home.breweries');
+                        });
+                    }]
+                })
+                .state('home.register', {
+                    url:'register',
+                    templateUrl: 'auth/register.html',
+                    controller: 'AuthController as authCtrl',
+                    onEnter: ['$state', 'Auth', function($state, Auth) {
+                        Auth.currentUser().then(function(){
+                            $state.go('home.breweries');
+                        });
+                    }]
+                })
             $urlRouterProvider.otherwise('/')
         })
 
