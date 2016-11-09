@@ -7,16 +7,23 @@
         controller: CreateMovieComponentController,
         templateUrl: 'components/create-movie/create-movie.html'
     }
-    function CreateMovieComponentController(MovieFactory, $state) {
+    function CreateMovieComponentController(MovieFactory, $state, Auth) {
         var ctrl = this;
 
         ctrl.createMovie = createMovie
+        ctrl.signedIn = Auth.isAuthenticated();
 
         function createMovie() {
-            return MovieFactory.createMovie(ctrl.movie)
-                               .then(function() {
-                                   $state.go('home.profile')
-                               })
+            if (ctrl.signedIn) {
+                return MovieFactory.createMovie(ctrl.movie)
+                                   .then(function() {
+                                       $state.go('home.profile')
+                                   })
+            } else {
+                alert("You must be signed in to create a movie");
+                $state.go('home.login')
+            }
+
         }
     }
 
