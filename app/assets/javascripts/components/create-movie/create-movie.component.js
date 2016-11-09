@@ -7,8 +7,17 @@
         controller: CreateMovieComponentController,
         templateUrl: 'components/create-movie/create-movie.html'
     }
-    function CreateMovieComponentController() {
+    function CreateMovieComponentController(MovieFactory, $state) {
+        var ctrl = this;
 
+        ctrl.createMovie = createMovie
+
+        function createMovie() {
+            return MovieFactory.createMovie(movie)
+                               .then(function() {
+                                   $state.go('home/profile')
+                               })
+        }
     }
 
     angular
