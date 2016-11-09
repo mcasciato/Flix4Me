@@ -19,11 +19,22 @@
             return Auth.currentUser()
                        .then(setCurrentUser)
         }
-        
+
         function setCurrentUser(user) {
             console.log(user);
             return vm.user = user;
         };
+
+        $scope.$on('devise:new-registration', function(e, user){
+            return vm.user = user;
+        });
+        $scope.$on('devise:login', function(e, user){
+            return vm.user = user;
+        });
+        $scope.$on('devise:logout', function(e, user){
+            return vm.user = {};
+        });
+
     }
 
     HomeController.$inject = ['$scope', 'Auth', '$state']
@@ -31,7 +42,5 @@
     angular
         .module('flix4me')
         .controller('HomeController', HomeController)
-
-
 
 }());
