@@ -9,10 +9,11 @@
 
         if (vm.signedIn) {
             $state.go('home.profile')
-        } else {
-            alert("You must be logged in to view your profile")
-            $state.go('home.login')
         }
+        // } else {
+        //     alert("You must be logged in to view your profile")
+        //     $state.go('home.login')
+        // }
     };
 
     angular

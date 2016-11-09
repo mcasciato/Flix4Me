@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
     end
 
     def create
-        movie = current_user.movies.create(movie_params)
+        movie = current_user.movies.new(movie_params)
         if movie.save
             render json: { status: 201 }
         else
