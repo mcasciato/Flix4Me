@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
     before_action :authenticate_user!, only: [:create, :update, :destroy]
 
     def index
-        movies = Movie.all
+        movies = current_user.movies
         render json: movies
     end
 
