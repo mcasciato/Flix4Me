@@ -18,7 +18,7 @@
         };
 
         function goToList() {
-            $state.go('home.mylist');
+            $state.go('home.profile');
         }
     };
 

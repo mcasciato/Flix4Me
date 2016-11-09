@@ -13,11 +13,20 @@
         <a class="nav-link" href="" ui-sref="home.tv_shows"><i class="fa fa-television"></i> TV Shows</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="" ui-sref="home.profile"><i class="fa fa-user"></i> Profile</a>
-      </li>
-      <li class="nav-item">
           <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info" title="About"></i> About</a>
       </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="" ui-sref="home.profile" ng-show="homeCtrl.signedIn()"><i class="fa fa-user"></i> Profile</a>
+      </li>
+      <!-- will not show when signedIn() is true -->
+      <li class="nav-item" ng-hide="homeCtrl.signedIn()">
+          <a class="nav-link" href="" ui-sref="home.login">Log In</a>
+      </li>
+      <li class="nav-item" ng-hide="homeCtrl.signedIn()">
+          <a class="nav-link" href="" ui-sref="home.register">Register</a>
+      </li>
+      <!-- will only show when signedIn() is true -->
+      <li class="nav-item" ng-show="homeCtrl.signedIn()"><a href="" class="nav-link" ng-click="homeCtrl.logout()">Log Out</a></li>
     </ul>
   </div>
 </nav>
