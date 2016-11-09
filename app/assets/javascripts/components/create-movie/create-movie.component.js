@@ -13,9 +13,9 @@
         ctrl.createMovie = createMovie
 
         function createMovie() {
-            return MovieFactory.createMovie(movie)
+            return MovieFactory.createMovie(ctrl.movie)
                                .then(function() {
-                                   $state.go('home/profile')
+                                   $state.go('home.profile')
                                })
         }
     }
