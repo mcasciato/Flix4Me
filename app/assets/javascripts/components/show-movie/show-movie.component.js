@@ -19,7 +19,19 @@
 
         activate();
 
+        function activate() {
+            getCurrentUser();
+        };
 
+        function getCurrentUser() {
+            return Auth.currentUser()
+                       .then(setCurrentUser);
+        }
+
+        function setCurrentUser(user) {
+            // console.log(user);
+            return vm.user = user;
+        }
 
     }
 
