@@ -33,6 +33,15 @@
             return vm.user = user;
         }
 
+        function getMovie(id) {
+            return MovieFactory.getMovie(id)
+                               .then(setMovie);
+        }
+
+        function setMovie(data) {
+            return ctrl.movie = data;
+        }
+
     }
 
     angular
