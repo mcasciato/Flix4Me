@@ -12,6 +12,14 @@
         var ctrl = this;
 
         ctrl.getMovie = getMovie;
+        // ctrl.updateMovie = updateMovie;
+        // ctrl.destroyMovie = getMovie;
+        ctrl.signedIn = Auth.isAuthenticated();
+        ctrl.getCurrentUser = getCurrentUser;
+
+        activate();
+
+
 
     }
 
