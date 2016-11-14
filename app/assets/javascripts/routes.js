@@ -40,6 +40,11 @@
                         });
                     }]
                 })
+                .state('home.show', {
+                    url: 'movies/:movieId',
+                    templateUrl: 'components/show-movie/show-movie.html',
+                    controller: 'ShowMovieComponentController as movieShowCtrl'
+                })
             $urlRouterProvider.otherwise('/')
         })
 
