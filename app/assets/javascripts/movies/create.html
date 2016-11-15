@@ -3,6 +3,10 @@
     <form name="form" ng-submit="moviesCtrl.createMovie()">
         <div class="form-group">
             <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="3" required="required"></input>
+            <div ng-messages="form.title.$error" ng-show="form.title.$touched || form.$submitted">
+                <div ng-message="required">Please provide a title.</div>
+                <div ng-message="minlength">Title must be at least 3 letters long.</div>
+            </div>
         </div>
         <div class="form-group">
             <input type="number" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year"></textarea>
