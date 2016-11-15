@@ -5,7 +5,8 @@
         return {
             getMovies: getMovies,
             createMovie: createMovie,
-            getMovie: getMovie
+            getMovie: getMovie;
+            updateMovie: updateMovie
         }
 
         function getMovies() {
@@ -35,6 +36,23 @@
             return $http.get('/movies/' + id)
                         .then(handleSuccess)
                         .catch(handleError)
+        }
+
+        function updateMovie(movie) {
+            var req = {
+                method: 'PATCH',
+                url: '/movies/' + movie.id,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                  movy: movy
+                }
+            };
+
+            return $http(req)
+                       .then(handleSuccess)
+                       .catch(handleError)
         }
 
         function handleSuccess(response) {
