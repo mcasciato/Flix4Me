@@ -15,14 +15,23 @@
                 <div ng-message="minlength">Year must be 4 digits (e.g. 2016)</div>
             </div>
         </div>
-        <div class="form-group">
-            <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot"></textarea>
+        <div class="form-group" ng-class="{ 'has-error' : form.plot.$invalid && !form.plot.$pristine }">
+            <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot" required="required"></textarea>
+            <div ng-messages="form.plot.$error" ng-show="form.plot.$touched || form.$submitted">
+                <div ng-message="required">Please provide a plot.</div>
+            </div>
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control" id="year" placeholder="Genre" ng-model="moviesCtrl.movie.genre"></textarea>
+        <div class="form-group" ng-class="{ 'has-error' : form.genre.$invalid && !form.genre.$pristine }">
+            <input type="text" name="genre" class="form-control" id="genre" placeholder="Genre" ng-model="moviesCtrl.movie.genre" required="required"></input>
+            <div ng-messages="form.genre.$error" ng-show="form.genre.$touched || form.$submitted">
+                <div ng-message="required">Please provide a genre.</div>
+            </div>
         </div>
-        <div class="form-group">
-            <input ng-model="moviesCtrl.movie.rating" type="number" class="form-control" id="number" placeholder="My Rating (1-lowest, 10-highest)">
+        <div class="form-group" ng-class="{ 'has-error' : form.rating.$invalid && !form.rating.$pristine }">
+            <input ng-model="moviesCtrl.movie.rating" type="number" class="form-control" id="rating" placeholder="My Rating (1-lowest, 10-highest)" name="rating" required="required">
+            <div ng-messages="form.rating.$error" ng-show="form.rating.$touched || form.$submitted">
+                <div ng-message="required">Please provide a rating.</div>
+            </div>
         </div>
         <input class="btn btn-primary btn-lg" type="submit" value="Edit Movie">
     </form>
