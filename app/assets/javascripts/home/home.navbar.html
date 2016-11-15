@@ -6,8 +6,11 @@
       <li class="nav-item">
           <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info" title="About"></i> About</a>
       </li>
-      <li class="nav-item" >
-        <a class="nav-link" href="" ui-sref="home.profile" ng-show="homeCtrl.signedIn()"><i class="fa fa-user"></i> Profile</a>
+      <li class="nav-item">
+          <a class="nav-link" href="" ui-sref="home.movies" ng-show="homeCtrl.signedIn()">My Movies</a>
+      </li>
+      <li class="nav-item" ng-show="homeCtrl.signedIn()">
+          <a class="nav-link" href="" ui-sref="home.create">Add Movie</a>
       </li>
       <li class="nav-item" ng-hide="homeCtrl.signedIn()">
           <a class="nav-link" href="" ui-sref="home.login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
