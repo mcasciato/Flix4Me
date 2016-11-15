@@ -8,6 +8,7 @@
         vm.signedIn = Auth.isAuthenticated();
         vm.getCurrentUser = getCurrentUser;
         vm.updateMovie = updateMovie;
+        vm.destroyMovie = destroyMovie;
 
         activate();
 
@@ -41,12 +42,21 @@
             }
         }
 
+        function destroyMovie(id) {
+            return MovieFactory.destroyMovie(id)
+                               .then(showMovies)
+        }
+
         function setMovie(data) {
             return vm.movie = data;
         }
 
         function showMovie(data) {
             $state.go('home.show', { movieId: data.id });
+        }
+
+        function showMovies() {
+            $state.go('home.movies');
         }
     }
 

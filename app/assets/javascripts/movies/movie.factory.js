@@ -6,7 +6,8 @@
             getMovies: getMovies,
             createMovie: createMovie,
             getMovie: getMovie,
-            updateMovie: updateMovie
+            updateMovie: updateMovie,
+            destroyMovie: destroyMovie
         }
 
         function getMovies() {
@@ -54,6 +55,13 @@
                        .then(handleSuccess)
                        .catch(handleError)
         }
+
+        function destroyMovie(id) {
+            return $http.delete('/movies/' + id)
+                .then(handleSuccess)
+                .catch(handleError)
+        }
+
 
         function handleSuccess(response) {
             console.log(response)
