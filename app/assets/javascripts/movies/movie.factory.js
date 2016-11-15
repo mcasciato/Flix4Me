@@ -5,7 +5,7 @@
         return {
             getMovies: getMovies,
             createMovie: createMovie,
-            getMovie: getMovie;
+            getMovie: getMovie,
             updateMovie: updateMovie
         }
 
