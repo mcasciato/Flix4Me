@@ -7,6 +7,7 @@
         vm.getMovie = getMovie;
         vm.signedIn = Auth.isAuthenticated();
         vm.getCurrentUser = getCurrentUser;
+        vm.updateMovie = updateMovie;
 
         activate();
 
@@ -30,8 +31,22 @@
                                .then(setMovie);
         }
 
+        function updateMovie() {
+            if (vm.signedIn) {
+                return MovieFactory.updateMovie(vm.movie)
+                                   .then(showMovie);
+            } else {
+                alert("Whoops. You need to sign in and be an admin to edit a Movie.");
+                $state.go('home.login')
+            }
+        }
+
         function setMovie(data) {
             return vm.movie = data;
+        }
+
+        function showMovie(data) {
+            $state.go('home.show', { movieId: data.id });
         }
     }
 
