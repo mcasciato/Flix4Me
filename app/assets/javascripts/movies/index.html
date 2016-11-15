@@ -1,5 +1,9 @@
 <h1 class="display-3">My Movies</h1>
 
+<div class="form-group col-xs-6">
+    <input class="form-control" ng-model="moviesCtrl.searchTerm" ng-change="moviesCtrl.refilter()" placeholder="Search by title or genre (e.g., Star Wars or Comedy)">
+</div>
+
 <table class="table table-hover">
     <thead class="thead-default">
         <tr>
