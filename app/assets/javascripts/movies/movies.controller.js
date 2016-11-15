@@ -15,7 +15,12 @@
         }
 
         function getMovies() {
-            
+            return MovieFactory.getMovies()
+                               .then(setMovies);
+        }
+
+        function setMovies(data) {
+            return vm.movies = data;
         }
     }
 
