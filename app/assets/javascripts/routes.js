@@ -43,6 +43,11 @@
                     templateUrl: 'movies/index.html',
                     controller: 'MoviesController as moviesCtrl'
                 })
+                .state('home.create', {
+                    url: 'movies/create',
+                    templateUrl: 'movies/create.html',
+                    controller: 'MoviesController as moviesCtrl'
+                })
             $urlRouterProvider.otherwise('/')
         }]);
 
