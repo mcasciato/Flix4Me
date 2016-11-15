@@ -10,7 +10,20 @@
 
         activate();
 
-        
+        function activate() {
+            getMovie($stateParams.movieId)
+            getCurrentUser();
+        }
+
+        function getCurrentUser() {
+            return Auth.currentUser();
+                       .then(setCurrentUser);
+        }
+
+        function setCurrentUser(user) {
+            console.log(user);
+            return vm.user = user;
+        }
     }
 
     MoviesShowController.$inject = ['MovieFactory', '$stateParams', '$state', 'Auth'];
