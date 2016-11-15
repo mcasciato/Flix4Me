@@ -2,22 +2,27 @@
     <h1 class="display-3">Add a Movie</h1>
     <form name="form" ng-submit="moviesCtrl.createMovie()">
         <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && !form.title.$pristine }">
-            <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="3" required="required"></input>
+            <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" required="required"></input>
             <div ng-messages="form.title.$error" ng-show="form.title.$touched || form.$submitted">
                 <div ng-message="required">Please provide a title.</div>
             </div>
         </div>
         <div class="form-group" ng-class="{ 'has-error' : form.year.$invalid && !form.year.$pristine }">
-            <input type="number" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year"></input>
+            <input type="number" name="year"class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year" required="required" maxlength="4" minlength="4"></input>
             <div ng-messages="form.year.$error" ng-show="form.year.$touched || form.$submitted">
                 <div ng-message="required">Please provide a year.</div>
+                <div ng-message="maxlength">Year must be 4 digits (e.g. 2016)</div>
+                <div ng-message="minlength">Year must be 4 digits (e.g. 2016)</div>
             </div>
         </div>
         <div class="form-group">
             <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot"></textarea>
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control" id="genre" placeholder="Genre" ng-model="moviesCtrl.movie.genre"></input>
+        <div class="form-group" ng-class="{ 'has-error' : form.genre.$invalid && !form.genre.$pristine }">
+            <input type="text" name="genre" class="form-control" id="genre" placeholder="Genre" ng-model="moviesCtrl.movie.genre" required="required"></input>
+            <div ng-messages="form.genre.$error" ng-show="form.genre.$touched || form.$submitted">
+                <div ng-message="required">Please provide a genre.</div>
+            </div>
         </div>
         <div class="form-group">
             <input ng-model="moviesCtrl.movie.rating" type="number" class="form-control" id="rating" placeholder="My Rating (1-lowest, 10-highest)">
