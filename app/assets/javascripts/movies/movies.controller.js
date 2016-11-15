@@ -34,6 +34,10 @@
                 $state.go('home.login')
             }
         }
+
+        function showMovie(data) {
+            $state.go('home.movies')
+        }
     }
 
     MoviesController.$inject = ['MovieFactory', '$filter', '$state', 'Auth'];
