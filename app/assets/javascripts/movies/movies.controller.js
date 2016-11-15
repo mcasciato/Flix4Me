@@ -12,6 +12,7 @@
         vm.resetMovies = resetMovies;
 
         vm.search = '';
+        vm.searchGenre = '';
 
         // instantiate
         activate();
@@ -45,7 +46,14 @@
         }
 
         function refilter() {
-            return vm.filteredList = $filter('filter')(vm.movies, vm.search)
+            if (vm.search && !vm.searchGenre) {
+                return vm.filteredList = $filter('filter')(vm.movies, vm.search)
+            } else if (vm.searchGenre && !vm.search) {
+                return vm.filteredList = $filter('filter')(vm.movies, vm.searchGenre)
+            } else {
+                vm.filteredGenreList = $filter('filter')(vm.movies, vm.searchGenre);
+                return vm.filteredList = $filter('filter')(vm.filteredGenreList, vm.search)
+            }
         }
 
         function resetMovies() {
