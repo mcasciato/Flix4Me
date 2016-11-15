@@ -1,0 +1,8 @@
+<div class="col-xs-6">
+    <h1 class="display-3">Add a Movie</h1>
+    <form name="form" ng-submit="moviesCtrl.createMovie()">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="3" required="required"></input>
+        </div>
+    </form>
+</div>
