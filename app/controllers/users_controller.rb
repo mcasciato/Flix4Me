@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
     def show
         user = User.find_by_id(params[:id])
-        render json: user, include: ["movies", "tv_shows"]
+        render json: user, include: ["movies"]
     end
 
 end

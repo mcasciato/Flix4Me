@@ -42,8 +42,8 @@ class MoviesController < ApplicationController
     end
 
     def destroy
-        movie = Movie.find_by_id(params[:id])
-        if movie.user == current_user.id
+        if current_user
+            movie = Movie.find_by_id(params[:id])
             if movie.destroy
                 render json: { status: 201 }
             else
