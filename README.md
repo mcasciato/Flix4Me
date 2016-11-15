@@ -1,2 +1,10 @@
 # Flix4Me
-Keep track of your favorite movies and TV shows in this Rails app with an AngularJS front-end!
+Flix4Me offers the ability to catalogue one's favorite movies in a user-friendly interface.
+
+## Usage
+
+## Contributing
+
+## License
+
+(c) 2016 Michael Casciato under the [MIT License](LICENSE.md)
