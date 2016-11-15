@@ -3,6 +3,11 @@
 <div class="form-group col-xs-6">
     <input class="form-control" ng-model="moviesCtrl.searchTerm" ng-change="moviesCtrl.refilter()" placeholder="Search by title or genre (e.g., Star Wars or Comedy)">
 </div>
+<div class="form-group col-xs-6">
+    <select class="form-control" ng-controller="MoviesController as moviesCtrl" ng-model="moviesCtrl.searchState" ng-change="moviesCtrl.refilter()" ng-options="movie.genre as movie.genre for movie in moviesCtrl.movies track by movie.id">
+        <option value="">Filter by Genre:</option>
+    </select>
+</div>
 
 <table class="table table-hover">
     <thead class="thead-default">
