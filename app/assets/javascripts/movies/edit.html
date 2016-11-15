@@ -3,6 +3,12 @@
     <form name="form" ng-submit="moviesShowCtrl.updateMovie()">
         <div class="form-group">
             <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="2" required="required"></input>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot"></textarea>
         </div>        
     </form>
 </div>
