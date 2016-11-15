@@ -8,6 +8,10 @@
         vm.getMovies = getMovies;
         vm.createMovie = createMovie;
         vm.signedIn = Auth.isAuthenticated();
+        vm.refilter = refilter;
+        vm.resetMovies = resetMovies;
+
+        vm.search = '';
 
         // instantiate
         activate();
@@ -18,7 +22,8 @@
 
         function getMovies() {
             return MovieFactory.getMovies()
-                               .then(setMovies);
+                               .then(setMovies)
+                               .then(resetMovies);
         }
 
         function setMovies(data) {
@@ -37,6 +42,14 @@
 
         function showMovie(data) {
             $state.go('home.movies')
+        }
+
+        function refilter() {
+            return vm.filteredList = $filter('filter')(vm.movies, vm.search)
+        }
+
+        function resetMovies() {
+            return vm.filteredList = vm.movies;
         }
     }
 
