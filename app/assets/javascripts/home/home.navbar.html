@@ -4,13 +4,10 @@
     <a class="navbar-brand" href="/"><i class="fa fa-film"></i> Flix4Me</a>
     <ul class="nav navbar-nav float-xs-right">
       <li class="nav-item">
-          <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info" title="About"></i> About</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="" ui-sref="home.movies" ng-show="homeCtrl.signedIn()">My Movies</a>
+          <a class="nav-link" href="" ui-sref="home.movies" ng-show="homeCtrl.signedIn()"><i class="fa fa-ticket" aria-hidden="true"></i> My Movies</a>
       </li>
       <li class="nav-item" ng-show="homeCtrl.signedIn()">
-          <a class="nav-link" href="" ui-sref="home.create">Add Movie</a>
+          <a class="nav-link" href="" ui-sref="home.create"><i class="fa fa-plus" aria-hidden="true"></i> Add Movie</a>
       </li>
       <li class="nav-item" ng-hide="homeCtrl.signedIn()">
           <a class="nav-link" href="" ui-sref="home.login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
@@ -20,6 +17,9 @@
       </li>
       <li class="nav-item" ng-show="homeCtrl.signedIn()">
           <span class="nav-link"><i class="fa fa-check-square-o" aria-hidden="true"></i> Signed in as: {{ homeCtrl.user.username }}</span>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="" ui-sref="home.about"><i class="fa fa-info" aria-hidden="true"></i> About</a>
       </li>
       <li class="nav-item" ng-show="homeCtrl.signedIn()"><a href="" class="nav-link" ng-click="homeCtrl.logout()" ui-sref="home"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
     </ul>
