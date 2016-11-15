@@ -6,6 +6,8 @@
 
         // callable methods
         vm.getMovies = getMovies;
+        vm.createMovie = createMovie;
+        vm.signedIn = Auth.isAuthenticated();
 
         // instantiate
         activate();
@@ -21,6 +23,16 @@
 
         function setMovies(data) {
             return vm.movies = data;
+        }
+
+        function createMovie() {
+            if (vm.signedIn) {
+                return MovieFactory.createMovie(vm.movie)
+                                   .then(showMovie)
+            } else {
+                alert("You must be logged in to add a movie.")
+                $state.go('home.login')
+            }
         }
     }
 
