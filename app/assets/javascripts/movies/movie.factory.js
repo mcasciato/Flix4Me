@@ -47,7 +47,7 @@
                     'Content-Type': 'application/json'
                 },
                 data: {
-                  movy: movy
+                  movie: movie
                 }
             };
 
