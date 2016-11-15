@@ -50,7 +50,7 @@
                 })
                 .state('home.show', {
                     url: 'movies/:movieId',
-                    templateUrl: 'movies/show.html'
+                    templateUrl: 'movies/show.html',
                     controller: 'MoviesShowController as moviesShowCtrl'
                 })
                 .state('home.edit', {

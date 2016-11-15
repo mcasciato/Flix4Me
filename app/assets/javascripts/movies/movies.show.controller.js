@@ -16,13 +16,22 @@
         }
 
         function getCurrentUser() {
-            return Auth.currentUser();
+            return Auth.currentUser()
                        .then(setCurrentUser);
         }
 
         function setCurrentUser(user) {
             console.log(user);
             return vm.user = user;
+        }
+
+        function getMovie(id) {
+            return MovieFactory.getMovie(id)
+                               .then(setMovie);
+        }
+
+        function setMovie(data) {
+            return vm.movie = data;
         }
     }
 
