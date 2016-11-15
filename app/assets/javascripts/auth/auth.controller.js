@@ -18,7 +18,7 @@
         };
 
         function goToList() {
-            $state.go('home.profile');
+            $state.go('home.movies');
         }
     };
 
