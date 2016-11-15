@@ -7,8 +7,13 @@
                 <div ng-message="required">Please provide a title.</div>
             </div>
         </div>
-        <div class="form-group">
-            <input type="number" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year"></textarea>
+        <div class="form-group" ng-class="{ 'has-error' : form.year.$invalid && !form.year.$pristine }">
+            <input type="number" name="year" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year" required="required" maxlength="4" minlength="4"></input>
+            <div ng-messages="form.year.$error" ng-show="form.year.$touched || form.$submitted">
+                <div ng-message="required">Please provide a year.</div>
+                <div ng-message="maxlength">Year must be 4 digits (e.g. 2016)</div>
+                <div ng-message="minlength">Year must be 4 digits (e.g. 2016)</div>
+            </div>
         </div>
         <div class="form-group">
             <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot"></textarea>
