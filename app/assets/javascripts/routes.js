@@ -48,6 +48,11 @@
                     templateUrl: 'movies/create.html',
                     controller: 'MoviesController as moviesCtrl'
                 })
+                .state('home.show', {
+                    url: 'movies/:movieId',
+                    templateUrl: 'movies/show.html'
+                    controller: 'MoviesController as moviesCtrl'
+                })
             $urlRouterProvider.otherwise('/')
         }]);
 
