@@ -32,13 +32,13 @@
         }
 
         function getMovie(id) {
-            return $http.get('/movies' + id)
+            return $http.get('/movies/' + id)
                         .then(handleSuccess)
                         .catch(handleError)
         }
 
         function handleSuccess(response) {
-            // console.log(response)
+            console.log(response)
             return response.data
         }
 
@@ -46,6 +46,8 @@
             console.log(error)
         }
     }
+
+    MovieFactory.$inject = ['$http'];
 
     angular
         .module('flix4me')
