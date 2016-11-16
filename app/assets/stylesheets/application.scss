@@ -47,6 +47,15 @@ p {
     font-family: 'Lato', sans-serif;
 }
 
+.navbar-flix {
+    background: #fff;
+	filter: none !important;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
 .form-control {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
