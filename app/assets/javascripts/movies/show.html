@@ -8,7 +8,7 @@
       </div>
       <div class="card-block">
         <p class="card-text">{{ moviesShowCtrl.movie.plot }}</p>
-        <a href="" ui-sref="home.edit({ movieId: moviesShowCtrl.movie.id })"><button type="button" class="btn btn-info">Edit Movie</button></a>
+        <a href="" ui-sref="home.edit({ movieId: moviesShowCtrl.movie.id })"><button type="button" class="btn btn-edit">Edit Movie</button></a>
         <a href="" ng-click="moviesShowCtrl.destroyMovie(moviesShowCtrl.movie.id)"><button type="button" class="btn btn-danger">Delete Movie</button></a>
       </div>
       <div class="card-footer text-muted">
