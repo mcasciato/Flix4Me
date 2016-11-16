@@ -59,10 +59,6 @@ p {
     color: #ecf0f1;
 }
 
-#about i:hover {
-    color: #34495e;
-}
-
 .social-btn {
     background-color: white;
 	border-radius: 3.6rem;
@@ -79,6 +75,21 @@ p {
 	    -ms-user-select: none;
 	        user-select: none;
 	width: 3.6rem;
+}
+
+.social-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
 }
 
 .navbar-flix {
