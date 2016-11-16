@@ -60,16 +60,31 @@ p {
 }
 
 .fa-3x {
-    color: #16a085;
+    color: #fff;
 }
 
 #about i {
     transition: all 0.2s ease-in-out;
 }
 
-#about i:hover {
+#about i.fa-linkedin:hover {
     opacity: .9;
-    color: #34495e;
+    color: #1B85BC;
+}
+
+#about i.fa-twitter:hover {
+    opacity: .9;
+    color: #1DA1F2;
+}
+
+#about i.fa-medium:hover {
+    opacity: .9;
+    color: #00AB6B;
+}
+
+#about i.fa-github:hover {
+    opacity: .9;
+    color: #000;
 }
 
 .navbar-flix {
