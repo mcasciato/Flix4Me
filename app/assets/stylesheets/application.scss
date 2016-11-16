@@ -18,6 +18,7 @@ body {
     // -moz-background-size: cover;
     // -o-background-size: cover;
     // background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer {
@@ -27,4 +28,8 @@ body {
     height: 60px;
     line-height: 60px;
     background-color: #f5f5f5;
+}
+
+.navbar {
+    font-family: 'Lato', sans-serif;
 }
