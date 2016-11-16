@@ -1,38 +1,48 @@
-<div class="col-xs-6">
-    <h1 class="display-3">Edit Movie</h1>
-    <form name="form" ng-submit="moviesShowCtrl.updateMovie()">
-        <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && !form.title.$pristine }">
-            <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="2" required="required"></input>
-            <div ng-messages="form.title.$error" ng-show="form.title.$touched || form.$submitted">
-                <div ng-message="required">Please provide a title.</div>
+<div class="row">
+    <div class="col-xs-6">
+        <h1 class="display-3">Edit Movie</h1>
+        <form name="form" ng-submit="moviesShowCtrl.updateMovie()">
+            <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && !form.title.$pristine }">
+                <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesCtrl.movie.title" minlength="2" required="required"></input>
+                <div ng-messages="form.title.$error" ng-show="form.title.$touched || form.$submitted">
+                    <div ng-message="required">Please provide a title.</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error' : form.year.$invalid && !form.year.$pristine }">
-            <input type="number" name="year" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year" required="required" maxlength="4" minlength="4"></input>
-            <div ng-messages="form.year.$error" ng-show="form.year.$touched || form.$submitted">
-                <div ng-message="required">Please provide a year.</div>
-                <div ng-message="maxlength">Year must be 4 digits (e.g. 2016)</div>
-                <div ng-message="minlength">Year must be 4 digits (e.g. 2016)</div>
+            <div class="form-group" ng-class="{ 'has-error' : form.year.$invalid && !form.year.$pristine }">
+                <input type="number" name="year" class="form-control" id="year" placeholder="Year (YYYY)" ng-model="moviesCtrl.movie.year" required="required" maxlength="4" minlength="4"></input>
+                <div ng-messages="form.year.$error" ng-show="form.year.$touched || form.$submitted">
+                    <div ng-message="required">Please provide a year.</div>
+                    <div ng-message="maxlength">Year must be 4 digits (e.g. 2016)</div>
+                    <div ng-message="minlength">Year must be 4 digits (e.g. 2016)</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error' : form.plot.$invalid && !form.plot.$pristine }">
-            <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot" required="required"></textarea>
-            <div ng-messages="form.plot.$error" ng-show="form.plot.$touched || form.$submitted">
-                <div ng-message="required">Please provide a plot.</div>
+            <div class="form-group" ng-class="{ 'has-error' : form.plot.$invalid && !form.plot.$pristine }">
+                <textarea ng-model="moviesCtrl.movie.plot" class="form-control " name="plot" id="plot" rows="8" placeholder="Plot" required="required"></textarea>
+                <div ng-messages="form.plot.$error" ng-show="form.plot.$touched || form.$submitted">
+                    <div ng-message="required">Please provide a plot.</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error' : form.genre.$invalid && !form.genre.$pristine }">
-            <input type="text" name="genre" class="form-control" id="genre" placeholder="Genre" ng-model="moviesCtrl.movie.genre" required="required"></input>
-            <div ng-messages="form.genre.$error" ng-show="form.genre.$touched || form.$submitted">
-                <div ng-message="required">Please provide a genre.</div>
+            <div class="form-group" ng-class="{ 'has-error' : form.genre.$invalid && !form.genre.$pristine }">
+                <input type="text" name="genre" class="form-control" id="genre" placeholder="Genre" ng-model="moviesCtrl.movie.genre" required="required"></input>
+                <div ng-messages="form.genre.$error" ng-show="form.genre.$touched || form.$submitted">
+                    <div ng-message="required">Please provide a genre.</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error' : form.rating.$invalid && !form.rating.$pristine }">
-            <input ng-model="moviesCtrl.movie.rating" type="number" class="form-control" id="rating" placeholder="My Rating (1-lowest, 10-highest)" name="rating" required="required">
-            <div ng-messages="form.rating.$error" ng-show="form.rating.$touched || form.$submitted">
-                <div ng-message="required">Please provide a rating.</div>
+            <div class="form-group" ng-class="{ 'has-error' : form.rating.$invalid && !form.rating.$pristine }">
+                <input ng-model="moviesCtrl.movie.rating" type="number" class="form-control" id="rating" placeholder="My Rating (1-lowest, 10-highest)" name="rating" required="required">
+                <div ng-messages="form.rating.$error" ng-show="form.rating.$touched || form.$submitted">
+                    <div ng-message="required">Please provide a rating.</div>
+                </div>
             </div>
-        </div>
-        <input class="btn btn-primary btn-lg" type="submit" value="Edit Movie">
-    </form>
+            <input class="btn btn-primary btn-lg" type="submit" value="Edit Movie">
+        </form>
+    </div>
+    <div class="col-xs-6">
+        <h4>Edited Movie Info:</h4>
+        <p><strong>Title:</strong> <span ng-bind="moviesShowCtrl.movie.title"></span></p>
+        <p><strong>Year:</strong> <span ng-bind="moviesShowCtrl.movie.year"></span></p>
+        <p><strong>Plot:</strong> <span ng-bind="moviesShowCtrl.movie.plot"></span></p>
+        <p><strong>Genre:</strong> <span ng-bind="moviesShowCtrl.movie.genre"></span></p>
+        <p><strong>Rating:</strong> <span ng-bind="moviesShowCtrl.movie.rating"></span></p>
+    </div>
 </div>
