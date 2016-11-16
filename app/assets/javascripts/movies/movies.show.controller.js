@@ -35,10 +35,7 @@
         function updateMovie() {
             if (vm.signedIn) {
                 return MovieFactory.updateMovie(vm.movie)
-                                   .then(showMovie);
-            } else {
-                alert("Whoops. You need to sign in and be an admin to edit a Movie.");
-                $state.go('home.login')
+                                   .then(showMovies);
             }
         }
 

@@ -7,7 +7,8 @@
 - [x] Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
     - [x] search: search by any attribute
     - [x] filter: filter by genre
-- [ ] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+- [x] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+    - movie edit page dynamically shows when updating
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 - [x] Data should be validated in Angular before submission
     - all fields
