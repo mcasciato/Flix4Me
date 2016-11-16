@@ -8,8 +8,8 @@
       </div>
       <div class="card-block">
         <p class="card-text">{{ moviesShowCtrl.movie.plot }}</p>
-        <a href="" ui-sref="home.edit({ movieId: moviesShowCtrl.movie.id })"><button type="button" class="btn btn-info btn-md">Edit Movie</button></a>
-        <a href="" ng-click="moviesShowCtrl.destroyMovie(moviesShowCtrl.movie.id)"><button type="button" class="btn btn-danger btn-md">Delete Movie</button></a>
+        <a href="" ui-sref="home.edit({ movieId: moviesShowCtrl.movie.id })"><button type="button" class="btn btn-info">Edit Movie</button></a>
+        <a href="" ng-click="moviesShowCtrl.destroyMovie(moviesShowCtrl.movie.id)"><button type="button" class="btn btn-danger">Delete Movie</button></a>
       </div>
       <div class="card-footer text-muted">
          My Rating: {{ moviesShowCtrl.movie.rating }}
