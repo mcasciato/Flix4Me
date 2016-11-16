@@ -1,6 +1,10 @@
 <div class="row">
-    <div class="col-xs-6">
+    <div class="col-md-12">
         <h1 class="display-3">Edit Movie</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
         <form name="form" ng-submit="moviesShowCtrl.updateMovie()">
             <div class="form-group" ng-class="{ 'has-error' : form.title.$invalid && !form.title.$pristine }">
                 <input class="form-control" type="text" placeholder="Title" name="title" ng-model="moviesShowCtrl.movie.title" required="required"></input>
@@ -37,12 +41,14 @@
             <input class="btn btn-flix" type="submit" value="Edit Movie">
         </form>
     </div>
-    <div class="col-xs-6" id="show-edit">
-        <h4>Edited Movie Info:</h4>
-        <p><strong>Title:</strong> <span ng-bind="moviesShowCtrl.movie.title"></span></p>
-        <p><strong>Year:</strong> <span ng-bind="moviesShowCtrl.movie.year"></span></p>
-        <p><strong>Plot:</strong> <span ng-bind="moviesShowCtrl.movie.plot"></span></p>
-        <p><strong>Genre:</strong> <span ng-bind="moviesShowCtrl.movie.genre"></span></p>
-        <p><strong>Rating:</strong> <span ng-bind="moviesShowCtrl.movie.rating"></span></p>
+    <div class="col-md-6" id="show-edit">
+        <div class="card card-block">
+          <h4 class="card-title">Edited Movie Info:</h4>
+          <p class="card-text"><strong>Title:</strong> <span ng-bind="moviesShowCtrl.movie.title"></span></p>
+          <p class="card-text"><strong>Year:</strong> <span ng-bind="moviesShowCtrl.movie.year"></span></p>
+          <p class="card-text"><strong>Plot:</strong> <span ng-bind="moviesShowCtrl.movie.plot"></span></p>
+          <p class="card-text"><strong>Genre:</strong> <span ng-bind="moviesShowCtrl.movie.genre"></span></p>
+          <p class="card-text"><strong>Rating:</strong> <span ng-bind="moviesShowCtrl.movie.rating"></span></p>
+        </div>
     </div>
 </div>
