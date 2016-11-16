@@ -92,6 +92,17 @@ p {
 	width: 0;
 }
 
+.social-button:hover span {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 3.6rem;
+	margin: -1.8rem;
+}
+
+.fa-twitter span {
+	background-color: #4099ff;
+}
+
 .navbar-flix {
     background: #34495e;
 	filter: none !important;
@@ -103,6 +114,10 @@ p {
 
 a.navbar-brand {
     color: #ecf0f1;
+}
+
+a.navbar-brand:hover {
+    color: #16a085;
 }
 
 .navbar-flix li a {
@@ -128,7 +143,7 @@ a.navbar-brand {
     color: #16a085;
 }
 
-a:hover {
+table a:hover {
     color: #16a085;
 }
 
