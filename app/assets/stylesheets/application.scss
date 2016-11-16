@@ -56,6 +56,23 @@ p {
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.navbar-flix a .brand {
+ 	padding-top: 15px;
+	padding-bottom: 15px;
+    color: #2980b9;
+}
+
+.navbar-flix li a {
+    background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #2980b9;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: 600;
+}
+
 .form-control {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
