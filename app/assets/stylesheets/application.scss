@@ -73,6 +73,22 @@ p {
 	font-weight: 600;
 }
 
+.navbar-flix li a:hover {
+    color: #16a085;
+}
+
+.navbar-flix li span {
+    color: #2980b9;
+}
+
+.navbar-flix li span:hover {
+    color: #16a085;
+}
+
+a:hover {
+    color: #16a085;
+}
+
 .form-control {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
