@@ -63,7 +63,12 @@ p {
     color: #16a085;
 }
 
+#about i {
+    transition: all 0.2s ease-in-out;
+}
+
 #about i:hover {
+    opacity: .9;
     color: #34495e;
 }
 
