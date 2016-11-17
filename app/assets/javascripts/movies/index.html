@@ -6,7 +6,7 @@
     </div>
 
     <div class="col-xs-6">
-        <select class="form-control" ng-model="moviesCtrl.searchGenre" ng-change="moviesCtrl.refilter()" ng-options="movie.genre as movie.genre for movie in moviesCtrl.movies track by movie.id">
+        <select class="form-control" ng-model="moviesCtrl.searchGenre" ng-change="moviesCtrl.refilter()" ng-options="movie.genre as movie.genre for movie in moviesCtrl.movies | unique: 'genre'">
             <option value="">Filter by Genre:</option>
         </select>
     </div>
