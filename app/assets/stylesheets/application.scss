@@ -63,6 +63,19 @@ p {
     color: #fff;
 }
 
+#auth {
+    color: #fff;
+}
+
+#auth a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#auth a:hover{
+    color: #16a085;
+}
+
 #about i {
     transition: all 0.2s ease-in-out;
 }
@@ -125,6 +138,7 @@ a.navbar-brand {
 
 a:hover {
     color: #16a085;
+    text-decoration: none;
 }
 
 .form-control {
