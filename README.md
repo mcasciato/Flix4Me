@@ -12,15 +12,7 @@ Follow these steps to run this app locally:
 7. Create an account and enjoy!
 
 ## Contributing
-I welcome any feature updates and/or bug reports. Follow these steps to contribute:
-1. Fork it (https://github.com/mcasciato/Flix4Me)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature`')
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-I will address any pull requests as timely as possible.
 
 ## License
 
-(c) 2016 Michael Casciato under the [MIT License](LICENSE.md)
+(c) 2016, Michael Casciato under the [MIT License](LICENSE.md)

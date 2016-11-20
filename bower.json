@@ -1,4 +1,6 @@
 {
+  "name": "flix4me",
+  "description": "Rails app with AngularJS front-end for managing your movie library",
   "vendor": {
     "name": "bower-rails generated vendor assets",
     "dependencies": {
