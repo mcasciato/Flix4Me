@@ -68,7 +68,6 @@
 
         function favorite(index) {
             vm.movies[index].favorites += 1;
-            console.log('Hello');
         }
     }
 
