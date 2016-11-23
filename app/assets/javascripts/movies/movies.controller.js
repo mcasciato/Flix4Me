@@ -3,6 +3,7 @@
 
     function MoviesController(MovieFactory, $filter, $state, Auth) {
         var vm = this;
+        vm.count = 0;
 
         // callable methods
         vm.getMovies = getMovies;
@@ -10,6 +11,7 @@
         vm.signedIn = Auth.isAuthenticated();
         vm.refilter = refilter;
         vm.resetMovies = resetMovies;
+        vm.favorite = favorite;
 
         vm.search = '';
         vm.searchGenre = '';
@@ -28,8 +30,12 @@
         }
 
         function setMovies(data) {
-            return vm.movies = data;
-        }
+            vm.movies = data;
+            for (var i = 0; i < vm.movies.length; i++) {
+                vm.movies[i].favorites = 0
+            }
+            return vm.movies
+            }
 
         function createMovie() {
             if (vm.signedIn) {
@@ -58,6 +64,11 @@
 
         function resetMovies() {
             return vm.filteredList = vm.movies;
+        }
+
+        function favorite(index) {
+            vm.movies[index].favorites += 1;
+            console.log('Hello');
         }
     }
 
