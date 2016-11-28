@@ -1,0 +1,9 @@
+<form name="form" ng-submit="$ctrl.postComment()">
+  <div class="form-group">
+    <textarea name="content" class="form-control" ng-model="$ctrl.comment.content" placeholder="Add your comment here..." required="required"></textarea>
+    <div ng-messages="form.content.error" ng-show="form.content.$touched || form.$submitted">
+      <div class="ui error message" ng-message="required">Comment box can't be blank.</div>
+    </div>
+  </div>
+    <input class="btn btn-flix" type="submit" value="Add Comment"></input>
+</form>
