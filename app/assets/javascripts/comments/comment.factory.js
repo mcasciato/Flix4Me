@@ -12,6 +12,19 @@
                             .then(showComment)
                             .catch(handleError)
             }
+
+                function showComment() {
+                  document.location.reload(true);
+                }
+
+                function handleSuccess(response) {
+                    console.log(response)
+                    return response.data
+                }
+
+                function handleError(error) {
+                    console.log(error)
+                }
         }
 
         CommentFactory.$inject = ['$http'];
