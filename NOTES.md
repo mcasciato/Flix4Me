@@ -1,23 +1,5 @@
-# Users
-- has an email, username, and password
-- has many movies
-- has many tv_shows
-
-# Movies
- - belongs to a user (edited and deleted by owner?)
- - has a title (string)
- - has a year (integer)
- - has a genre (string)
- - has a plot (text)
- - has a rating (integer, 1-10)
- <!-- - has a poster (string - link) (add later?) -->
-
-# TV Shows
- - belongs to a user (edited and deleted by owner?)
- - has a title (string)
- - has a year (integer)
- - has a genre (string)
- - has a plot (text)
- - has a rating (integer, 1-10)
- <!-- - has a number of seasons (integer) (add later)-->
- <!-- - has a poster (string - link) (add later?) -->
+# To do:
+1.  Build out a comments feature in the show page for each movie so that users can add many comments to a single movie.
+    - new table `comments`, with `:content` and `:movie_id`
+2. Build out the favorites feature to be able to save to the Rails Back End
+    - `:favorites` - new table or column in `movies`...?
