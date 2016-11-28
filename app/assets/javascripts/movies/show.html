@@ -24,8 +24,8 @@
             <comments></comments>
             <br>
             <h3 class="card-title">Comments</h3>
-                <ul class="item" ng-repeat="comment in moviesShowCtrl.movie.comments">
-                    <li>{{ comment.content }}</li>
+                <ul class="list-group list-group-flush" ng-repeat="comment in moviesShowCtrl.movie.comments">
+                    <li class="list-group-item">{{ comment.content }}</li>
         </div>
     </div>
 </div><!-- comments -->
