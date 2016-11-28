@@ -9,6 +9,13 @@
 
     function NewCommentController($stateParams, $state, CommentFactory) {
 
+      var ctrl = this;
+      ctrl.postComment = postComment;
+
+      function postComment() {
+        return CommentFactory.newComment($stateParams, ctrl.comment);
+      };
+
     };
 
     NewCommentController.$inject = ['$stateParams', '$state', 'CommentFactory'];
