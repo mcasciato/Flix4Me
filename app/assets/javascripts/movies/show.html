@@ -1,4 +1,4 @@
-<div class="col-xs-6 offset-xs-3">
+<div class="col-xs-6">
     <div class="card text-xs-center">
         <br>
         <img class="card-img-top img-fluid" src="http://placehold.it/358x500.jpg" alt="Card image">
@@ -17,3 +17,15 @@
       </div>
     </div>
 </div>
+
+<div class="col-xs-6">
+    <div class="card">
+        <div class="card-block">
+            <comments></comments>
+            <br>
+            <h3 class="card-title">Comments</h3>
+                <ul class="item" ng-repeat="comment in moviesShowCtrl.movie.comments">
+                    <li>{{ comment.content }}</li>
+        </div>
+    </div>
+</div><!-- comments -->
