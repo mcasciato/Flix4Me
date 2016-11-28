@@ -1,6 +1,6 @@
 class CommentSerializer < ActiveModel::Serializer
 
-    attributes :id, :content, :move_id
+    attributes :id, :content, :movie_id
 
     has_one :movie
 

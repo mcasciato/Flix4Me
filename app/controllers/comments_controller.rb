@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
                 render json:
                     { errors: comment.errors.full_messages },
                     status: 422
+            end
     end
 
     private
