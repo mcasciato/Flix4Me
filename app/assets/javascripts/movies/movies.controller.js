@@ -3,7 +3,6 @@
 
     function MoviesController(MovieFactory, $filter, $state, Auth) {
         var vm = this;
-        vm.count = 0;
 
         // callable methods
         vm.getMovies = getMovies;
@@ -67,7 +66,7 @@
         }
 
         function favorite(index) {
-            vm.movies[index].favorites += 1;
+            vm.movies[index].favorites ++;
         }
     }
 
