@@ -35,7 +35,7 @@
         function updateMovie() {
             if (vm.signedIn) {
                 return MovieFactory.updateMovie(vm.movie)
-                                   .then(showMovies);
+                                   .then(showMovie);
             }
         }
 
@@ -49,7 +49,7 @@
         }
 
         function showMovie(data) {
-            $state.go('home.show', { movieId: data.id });
+            $state.go('home.show', { movieId: vm.movie.id });
         }
 
         function showMovies() {
