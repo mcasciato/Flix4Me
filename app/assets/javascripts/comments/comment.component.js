@@ -11,10 +11,16 @@
 
       var ctrl = this;
       ctrl.postComment = postComment;
+      ctrl.addComment = addComment;
 
       function postComment() {
         return CommentFactory.newComment($stateParams, ctrl.comment);
       };
+
+      function addComment(data) {
+          var commentHtml = "<li class='list-group-item'>" + ctrl.comment.content + "</li>";
+          $('#comments ul li:last').append(commentHtml);
+      }
 
     };
 
