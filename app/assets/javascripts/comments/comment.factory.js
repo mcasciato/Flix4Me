@@ -9,13 +9,14 @@
             function newComment(params, commentData) {
                 return $http.post('/movies/' + params.movieId + '/comments.json', commentData)
                             .then(handleSuccess)
-                            .then(showComment)
-                            .catch(handleError)
+                            // .then(showComment)
+                            .catch(handleError);
+                            this.reset();
             }
 
-                function showComment() {
-                  document.location.reload(true);
-                }
+                // function showComment() {
+                //   document.location.reload(true);
+                // }
 
                 function handleSuccess(response) {
                     console.log(response)
