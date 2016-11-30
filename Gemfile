@@ -33,8 +33,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 # gem to hide ENV key and variable
 gem 'dotenv-rails'
-# acts as votable for voting
-gem 'acts_as_votable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
