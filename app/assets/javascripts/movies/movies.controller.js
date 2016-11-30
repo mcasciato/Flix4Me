@@ -10,7 +10,7 @@
         vm.signedIn = Auth.isAuthenticated();
         vm.refilter = refilter;
         vm.resetMovies = resetMovies;
-        vm.favorite = favorite;
+        vm.view = view;
 
         vm.search = '';
         vm.searchGenre = '';
@@ -31,7 +31,7 @@
         function setMovies(data) {
             vm.movies = data;
             for (var i = 0; i < vm.movies.length; i++) {
-                vm.movies[i].favorites = 0
+                vm.movies[i].views = 0
             }
             return vm.movies
             }
@@ -65,8 +65,8 @@
             return vm.filteredList = vm.movies;
         }
 
-        function favorite(index) {
-            vm.movies[index].favorites ++;
+        function view(index) {
+            vm.movies[index].views ++;
         }
     }
 

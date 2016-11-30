@@ -25,7 +25,7 @@
             <th>Title</th>
             <th>Year</th>
             <th>Genre</th>
-            <th>Favorites</th>
+            <th>Views</th>
         </tr>
     </thead>
     <tbody>
@@ -33,7 +33,7 @@
             <td><a href="" class="movie-link" ui-sref="home.show({ movieId: movie.id })">{{ movie.title }}</a></td>
             <td>{{ movie.year }}</td>
             <td>{{ movie.genre }}</td>
-            <td><button class="btn btn-heart btn-sm" ng-click="moviesCtrl.favorite($index)"><i class="fa fa-heart"></i></button> {{ movie.favorites }}</td>
+            <td><button class="btn btn-heart btn-sm" ng-click="moviesCtrl.view($index)"><i class="fa fa-heart"></i></button> {{ movie.views }}</td>
         </tr>
     </tbody>
 </table>
