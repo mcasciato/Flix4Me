@@ -10,7 +10,7 @@
         vm.signedIn = Auth.isAuthenticated();
         vm.refilter = refilter;
         vm.resetMovies = resetMovies;
-        vm.view = view;
+        vm.addView = addView;
 
         vm.search = '';
         vm.searchGenre = '';
@@ -65,7 +65,7 @@
             return vm.filteredList = vm.movies;
         }
 
-        function view(index) {
+        function addView(index) {
             vm.movies[index].views ++;
         }
     }
