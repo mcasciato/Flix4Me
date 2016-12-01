@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 		comment = movie.comments.find(params[:id])
 		comment.increment!(:upvotes)
 
-		respond_with movie.comment
+		respond_with movie, comment
 	end
 
     private

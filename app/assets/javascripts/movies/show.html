@@ -13,7 +13,7 @@
         <a href="" ng-click="moviesShowCtrl.destroyMovie(moviesShowCtrl.movie.id)"><button type="button" class="btn btn-danger">Delete Movie</button></a>
       </div>
       <div class="card-footer text-muted">
-         My Rating: {{ moviesShowCtrl.movie.rating }} 
+         My Rating: {{ moviesShowCtrl.movie.rating }} | View Count: {{ moviesShowCtrl.movie.upvotes }}
       </div>
     </div>
 </div>
@@ -25,7 +25,7 @@
             <br>
             <h3 class="card-title">Comments</h3>
                 <ul class="list-group list-group-flush" ng-repeat="comment in moviesShowCtrl.movie.comments">
-                    <li class="list-group-item">{{ comment.content }}</li>
+                    <p><button class="btn btn-view btn-sm"><i class="fa fa-thumbs-up"></i></button> {{ comment.content }} | <small>Likes: {{ comment.upvotes }}</small></p>
         </div>
     </div>
 </div><!-- comments -->
