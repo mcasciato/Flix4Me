@@ -5,7 +5,13 @@ Rails.application.routes.draw do
 
     resources :users, only: [:show, :edit]
     resources :movies, only: [:create, :update, :destroy, :index, :show] do
-        resources :comments, only: [:create, :index]
+        member do
+            put '/upvote' => 'movies#upvote'
+        end
+        resources :comments, only: [:create, :index] do
+            member do
+                put '/upvote' => 'comment#upvote'
+            end
+        end
     end
-    resources :tv_shows, only: [:create, :update, :destroy, :index, :show]
 end
