@@ -33,12 +33,6 @@
                 <div id="ng-message" class="lead" ng-message="required">Please provide a rating.</div>
             </div>
         </div>
-        <div class="form-group" ng-class="{ 'has-error' : form.views.$invalid && !form.views.$pristine }">
-            <input ng-model="moviesCtrl.movie.views" type="number" class="form-control" id="views" placeholder="Number of Views" name="views" required="required">
-            <div ng-messages="form.views.$error" ng-show="form.views.$touched || form.$submitted">
-                <div id="ng-message" class="lead" ng-message="required">Please provide a number of  views.</div>
-            </div>
-        </div>
         <input class="btn btn-flix" type="submit" value="Add Movie">
     </form>
 </div>
