@@ -30,7 +30,7 @@
 
         function setMovies(data) {
             return vm.movies = data;
-            }
+        }
 
         function createMovie() {
             if (vm.signedIn) {
@@ -61,8 +61,8 @@
             return vm.filteredList = vm.movies;
         }
 
-        function addView(index) {
-            vm.movies[index].views ++;
+        function addView(movie) {
+            return MovieFactory.upvote(movie);
         }
     }
 
