@@ -7,7 +7,8 @@
             createMovie: createMovie,
             getMovie: getMovie,
             updateMovie: updateMovie,
-            destroyMovie: destroyMovie
+            destroyMovie: destroyMovie,
+            upvote: upvote
         }
 
         function getMovies() {
@@ -62,6 +63,14 @@
                 .catch(handleError)
         }
 
+        function upvote(movie) {
+            return $http.put('/movies/' + movie.id + '/upvote.json')
+    			.success(function (data) {
+    				movie.upvotes++;
+    			})
+                .then(handleSuccess)
+                .catch(handleError)
+        }
 
         function handleSuccess(response) {
             console.log(response)
