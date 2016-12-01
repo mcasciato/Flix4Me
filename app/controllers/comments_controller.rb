@@ -18,6 +18,14 @@ class CommentsController < ApplicationController
             end
     end
 
+    def upvote
+		movie = Movie.find(params[:movie_id])
+		comment = movie.comments.find(params[:id])
+		comment.increment!(:upvotes)
+
+		respond_with movie.comment
+	end
+
     private
 
         def comment_params

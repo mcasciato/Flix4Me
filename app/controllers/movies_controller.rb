@@ -54,6 +54,13 @@ class MoviesController < ApplicationController
         end
     end
 
+    def upvote
+		movie = Movie.find(params[:id])
+		movie.increment!(:upvotes)
+
+		respond_with movie
+	end
+
     private
 
     def movie_params
