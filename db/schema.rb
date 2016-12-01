@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201161752) do
+ActiveRecord::Schema.define(version: 20161201154556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,13 +35,6 @@ ActiveRecord::Schema.define(version: 20161201161752) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_movie_views", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "user_id"
-    t.index ["movie_id"], name: "index_user_movie_views_on_movie_id", using: :btree
-    t.index ["user_id"], name: "index_user_movie_views_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -62,6 +55,4 @@ ActiveRecord::Schema.define(version: 20161201161752) do
   end
 
   add_foreign_key "comments", "users"
-  add_foreign_key "user_movie_views", "movies"
-  add_foreign_key "user_movie_views", "users"
 end
