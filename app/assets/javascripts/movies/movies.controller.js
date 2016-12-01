@@ -29,11 +29,7 @@
         }
 
         function setMovies(data) {
-            vm.movies = data;
-            for (var i = 0; i < vm.movies.length; i++) {
-                vm.movies[i].views = 0
-            }
-            return vm.movies
+            return vm.movies = data;
             }
 
         function createMovie() {
