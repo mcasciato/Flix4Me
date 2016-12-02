@@ -13,14 +13,14 @@
             }
 
 
-                function handleSuccess(response) {
-                    console.log(response)
-                    return response.data
-                }
+            function handleSuccess(response) {
+                console.log(response)
+                return response.data
+            }
 
-                function handleError(error) {
-                    console.log(error)
-                }
+            function handleError(error) {
+                console.log(error)
+            }
         }
 
         CommentFactory.$inject = ['$http'];
