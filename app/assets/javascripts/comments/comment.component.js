@@ -10,17 +10,14 @@
     function NewCommentController($stateParams, $state, CommentFactory) {
 
       var ctrl = this;
-      ctrl.postComment = postComment;
-      ctrl.addComment = addComment;
+      ctrl.createComment = createComment;
 
-      function postComment() {
-        return CommentFactory.newComment($stateParams, ctrl.comment);
+      function createComment() {
+        return CommentFactory.newComment($stateParams, ctrl.comment)
+                             .then(function(data) {
+                                 $state.go('home.movies')
+                             })
       };
-
-      function addComment(data) {
-          var commentHtml = "<li class='list-group-item'>" + ctrl.comment.content + "</li>";
-          $('#comments ul li:last').append(commentHtml);
-      }
 
     };
 
