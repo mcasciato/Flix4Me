@@ -16,9 +16,10 @@
       function createComment() {
         return CommentFactory.newComment($stateParams, ctrl.comment)
                              .then(function(data) {
+                                 ctrl.comments.push(data);
                                  $state.go('home.show', { movieId: data.movie_id })
+                                 console.log(data);
                              })
-                             .then(getComments)
       };
 
       function getComments() {
