@@ -17,8 +17,8 @@
         return CommentFactory.newComment($stateParams, ctrl.comment)
                              .then(function(data) {
                                  $state.go('home.show', { movieId: data.movie_id })
-                                //  $state.go('home.movies')
                              })
+                             .then(getComments)
       };
 
       function getComments() {
