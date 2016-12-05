@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
     def index
-        comments = Comment.all
+        comments = Movie.find_by_id(params[:movie_id]).comments
         render json: comments
     end
 
