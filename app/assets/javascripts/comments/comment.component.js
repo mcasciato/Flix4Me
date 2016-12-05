@@ -11,13 +11,24 @@
 
       var ctrl = this;
       ctrl.createComment = createComment;
+      ctrl.getComments = getComments;
 
       function createComment() {
         return CommentFactory.newComment($stateParams, ctrl.comment)
                              .then(function(data) {
-                                 $state.go('home.movies')
+                                 $state.go('home.show', { movieId: data.movie_id })
+                                //  $state.go('home.movies')
                              })
       };
+
+      function getComments() {
+        return CommentFactory.getComments($stateParams, ctrl.comment)
+                             .then(setComments);
+      };
+
+      function setComments(data) {
+          return ctrl.comments = data;
+      }
 
     };
 
