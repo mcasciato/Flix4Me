@@ -33,12 +33,12 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 # gem to hide ENV key and variable
 gem 'dotenv-rails'
-gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'pry'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -51,6 +51,10 @@ group :development do
 end
 
 group :production do
+<<<<<<< HEAD
+=======
+  gem 'pg'
+>>>>>>> parent of 648b54a... updated Gemfile for Heroku
   gem 'rails_12factor'
 end
 
