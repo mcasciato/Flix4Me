@@ -51,10 +51,7 @@ group :development do
 end
 
 group :production do
-<<<<<<< HEAD
-=======
   gem 'pg'
->>>>>>> parent of 648b54a... updated Gemfile for Heroku
   gem 'rails_12factor'
 end
 
