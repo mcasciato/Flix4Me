@@ -18,3 +18,5 @@
 
 # Ignore Bower Components
 /vendor/assets/bower_components/*
+
+.env
