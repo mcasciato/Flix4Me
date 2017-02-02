@@ -11,4 +11,4 @@
     angular
         .module('flix4me')
         .service('PopularMoviesService', PopularMoviesService);
-}()):
+}());
