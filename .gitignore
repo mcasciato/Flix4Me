@@ -16,6 +16,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-
+# Ignore Bower Components
+/vendor/assets/bower_components/*
 
 .env
