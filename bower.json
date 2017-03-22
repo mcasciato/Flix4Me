@@ -9,7 +9,8 @@
       "angular-devise": "latest",
       "angular-filter": "latest",
       "angular-messages": "v1.5.8",
-      "bootstrap": "v4.0.0-alpha.5"
+      "bootstrap": "v4.0.0-alpha.5",
+      "tether": "latest"
     }
   }
 }
