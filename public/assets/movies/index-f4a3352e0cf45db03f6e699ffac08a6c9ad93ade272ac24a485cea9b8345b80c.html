@@ -1,0 +1,53 @@
+<h1 class="display-3">My Movies</h1>
+
+<div class="row">
+    <div class="form-group col-xs-6">
+        <input class="form-control" ng-model="moviesCtrl.search" ng-change="moviesCtrl.refilter()" placeholder="Search (e.g., Star Wars, Comedy, 2014)">
+    </div>
+
+    <div class="col-xs-6">
+        <select class="form-control" ng-model="moviesCtrl.searchGenre" ng-change="moviesCtrl.refilter()" ng-options="movie.genre as movie.genre for movie in moviesCtrl.movies | unique: 'genre'">
+            <option value="">Filter by Genre:</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" id="reset">
+        <a href="" ng-click="moviesCtrl.resetMovies()"><button type="button" class="btn btn-flix">Reset Movies</button></a>
+    </div>
+</div>
+
+<br>
+
+<table class="table">
+    <thead class="thead-default">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Genre</th>
+            <th>Views</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="movie in moviesCtrl.filteredList track by movie.id">
+            <td><a href="" class="movie-link" ui-sref="home.show({ movieId: movie.id })">{{ movie.title }}</a></td>
+            <td>{{ movie.year }}</td>
+            <td>{{ movie.genre }}</td>
+            <td><button class="btn btn-view btn-sm" ng-click="moviesCtrl.addView(movie)"><i class="fa fa-check-square-o"></i></button> {{ movie.upvotes }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <div class="row">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="https://image.tmdb.org/t/p/original/weUSwMdQIa3NaXVzwUoIIcAi85d.jpg" alt="Card image cap">
+      </div>
+      <div class="card">
+          <img class="card-img-top img-thumbnail" src="https://images.ttcdn.co/media/i/product/277303-2ffa5f86efaa45418bdeb13c6797301a.jpeg?size=1000" alt="Card image cap">
+      </div>
+      <div class="card">
+          <img class="card-img-top img-thumbnail" src="https://image.tmdb.org/t/p/original/kfX8Ctin3fSZbdnjh6CXSNZUOVP.jpg" alt="Card image cap">
+      </div>
+    </div>
+</div> -->
