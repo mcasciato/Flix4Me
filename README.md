@@ -13,6 +13,6 @@ Follow these steps to run this app locally:
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/mcasciato/flix4me. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
-## License
 
+## License
 (c) 2016, Michael Casciato under the [MIT License](LICENSE.md)
