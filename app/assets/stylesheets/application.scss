@@ -118,31 +118,8 @@ p {
     z-index: 1030
 }
 
-a.navbar-brand {
+button.navbar-toggler {
     color: #ecf0f1;
-}
-
-.navbar-flix li a {
-    background: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	color: #ecf0f1;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-weight: 600;
-}
-
-.navbar-flix li a:hover {
-    color: #16a085;
-}
-
-.navbar-flix li span {
-    color: #ecf0f1;
-}
-
-.navbar-flix li span:hover {
-    color: #16a085;
 }
 
 a:hover {
