@@ -118,6 +118,11 @@ p {
     z-index: 1030
 }
 
+.navbar.fixed-bottom {
+    background: #34495e;
+    text-align: center;
+}
+
 button.navbar-toggler {
     color: #ecf0f1;
 }
@@ -195,6 +200,10 @@ a:hover {
 
 #show-edit {
     color: #fff;
+}
+
+#movies {
+    text-align: center;
 }
 
 .card-title {
