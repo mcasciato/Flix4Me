@@ -1,0 +1,11 @@
+%h3.card-header Add a Comment
+.card-block
+    %div{"ng-include" =>"'comments/comment-form.html'"}
+%br/
+.card-block
+    %h3.card-title{"ng-click" => "$ctrl.getComments()"} Comments
+    %ul.list-group.list-group-flush{"ng-repeat" => "comment in $ctrl.comments"}
+        %p
+            %button.btn.btn-view.btn-sm
+                %i.fa.fa-thumbs-up 
+            {{ comment.content }}
