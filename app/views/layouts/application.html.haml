@@ -1,0 +1,17 @@
+!!!
+%html{:lang => "en", "ng-app" =>"flix4me"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Flix4Me
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+
+    = stylesheet_link_tag    'application', media: 'all'  
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:300|Roboto", :rel =>"stylesheet"}
+    = javascript_include_tag 'application'
+  %body
+    = yield 
+    %nav.navbar.fixed-bottom.navbar-light.navbar-inverse.bg-faded
+      %span.navbar-text
+        &copy; 2016 | Michael Casciato
+
