@@ -1,0 +1,30 @@
+.col-md-6
+    %h1.display-3 Add a Movie
+    %form{:name => "form", "ng-submit" => "moviesCtrl.createMovie()"}
+        .form-group{"ng-class" => "{ 'has-error' : form.name.$invalid && !form.title.$pristine }"}
+            %input.form-control{:type => "text", :placeholder => "Title", :name => "title", "ng-model" => "moviesCtrl.movie.title", :required => "required"} 
+            %div{"ng-messages" => "form.title.$error", "ng-show" => "form.title.$touched || form.$submitted"}
+                #ng-message.lead{"ng-message" => "required"} Please provide a title.
+        .form-group{"ng-class" => "{ 'has-error' : form.year.$invalid && !form.year.$pristine }"} 
+            %input.form-control#year{:type => "number", :name => "year", :placeholder => "Year (YYYY)", "ng-model" => "moviesCtrl.movie.year", :required => "required",  :maxlength => "4", :minlength => "4"} 
+            %div{"ng-messages" => "form.year.$error", "ng-show" => "form.year.$touched || form.$submitted"} 
+                #ng-message.lead{"ng-message" => "required"} Please provide a year.
+                #ng-message.lead{"ng-message" => "maxlength"} Year must be 4 digits (e.g. 2016)
+                #ng-message.lead{"ng-message" => "minlength"} Year must be 4 digits (e.g. 2016)
+        .form-group{"ng-class" => "{ 'has-error' : form.plot.$invalid && !form.plot.$pristine }"} 
+            %textarea.form-control#plot{"ng-model" => "moviesCtrl.movie.plot", :name => "plot", :rows => "8", :placeholder => "Plot", :required => "required"} 
+            %div{"ng-messages" => "form.plot.$error", "ng-show" => "form.plot.$touched || form.$submitted"} 
+                #ng-message.lead{"ng-message" => "required"} Please provide a plot.
+        .form-group{"ng-class" => "{ 'has-error' : form.genre.$invalid && !form.genre.$pristine }"} 
+            %input.form-control#genre{:type => "text", :name => "genre", :placeholder => "Genre", "ng-model" => "moviesCtrl.movie.genre", :required => "required"} 
+            %div{"ng-messages" => "form.genre.$error", "ng-show" => "form.genre.$touched || form.$submitted"} 
+                #ng-message.lead{"ng-message" => "required"} Please provide a genre.
+        .form-group{"ng-class" => "{ 'has-error' : form.rating.$invalid && !form.rating.$pristine }"} 
+            %input.form-control#rating{"ng-model" => "moviesCtrl.movie.rating", :type => "number", :placeholder => "My Rating (1-lowest, 10-highest)", :name => "rating",  :required => "required"} 
+            %div{"ng-messages" => "form.rating.$error", "ng-show" => "form.rating.$touched || form.$submitted"} 
+                #ng-message.lead{"ng-message" => "required"} Please provide a rating.
+        .form-group 
+            -# %input{:type => "file", :name => "image", "ng-model" => "moviesCtrl.movie.image"} 
+        %input.btn.btn-flix{:type => "submit", :value => "Add Movie"}
+
+
