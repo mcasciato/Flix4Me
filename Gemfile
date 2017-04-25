@@ -37,6 +37,7 @@ gem 'dotenv-rails'
 gem 'paperclip'
 # for managing AngularJS minification in Rails assets pipeline
 gem 'ngannotate-rails'
+gem 'haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
