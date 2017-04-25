@@ -1,0 +1,17 @@
+.form-group.row
+    .col-xs-6
+        %h1.display-4 Register
+        %form{"ng-submit" => "authCtrl.register()"}
+            .form-group
+                %input.form-control{:type => "email",:placeholder => "Email", "ng-model" => "authCtrl.user.email"}
+            .form-group
+                %input.form-control{:type => "text", :placeholder => "Username", "ng-model" => "authCtrl.user.username"}
+            .form-group
+                %input.form-control{ :type => "password", :placeholder => "Password", "ng-model" => "authCtrl.user.password"}
+            .form-group
+                %input.btn.btn-flix{:type =>"submit", :value => "Register"}
+        %p#auth.lead
+            Already signed up? 
+            %a{:href => "", "ui-sref" => "home.login"} Click here to login.
+
+
