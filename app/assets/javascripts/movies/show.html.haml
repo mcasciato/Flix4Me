@@ -1,0 +1,21 @@
+.row
+    .col-md-6
+        .card#show
+            %img.card-img-top{:src => "http://placehold.it/358x500.jpg", :alt => "Card image"}
+            .card-block
+                %h4.card-title {{ moviesShowCtrl.movie.title }}
+                %h6.card-subtitle.text-muted {{ moviesShowCtrl.movie.year }} | {{ moviesShowCtrl.movie.genre }}
+            .card-block
+                %p.card-text {{ moviesShowCtrl.movie.plot }}
+                %a{:href => "", "ui-sref" => "home.edit({ movieId: moviesShowCtrl.movie.id })"}
+                    %button.btn.btn-edit{:type => "button"} Edit Movie
+                %a{:href => "", "ng-click" => "moviesShowCtrl.destroyMovie(moviesShowCtrl.movie.id)"}
+                %button.btn.btn-danger{:type => "button"} Delete Movie
+            .card-footer.text-muted
+                My Rating: {{ moviesShowCtrl.movie.rating }} | View Count: {{ moviesShowCtrl.movie.upvotes }}
+    .col-md-6
+        .card
+            %comments
+        
+    
+
